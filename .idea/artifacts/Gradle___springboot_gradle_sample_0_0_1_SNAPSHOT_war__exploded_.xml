@@ -57,6 +57,26 @@
           <element id="library" level="project" name="Gradle: org.unbescape:unbescape:1.1.0.RELEASE" />
           <element id="library" level="project" name="Gradle: ch.qos.logback:logback-core:1.1.11" />
           <element id="library" level="project" name="Gradle: org.apache.tomcat:tomcat-annotations-api:8.5.23" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-jpa/1.5.9.RELEASE/8628320876aa12cc406216523effe954fbd354c0/spring-boot-starter-data-jpa-1.5.9.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-aop/1.5.9.RELEASE/fab419df8d7a13968a51ebfcbcad7ef320d66184/spring-boot-starter-aop-1.5.9.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-jdbc/1.5.9.RELEASE/6769ecea55e952afb64f17975638c5afd1e59ef3/spring-boot-starter-jdbc-1.5.9.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.0.12.Final/e58bf1c660e6706d8e2cbb53bae110f574366102/hibernate-core-5.0.12.Final.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-entitymanager/5.0.12.Final/302a526f5058290e9cbd719a5caf9f248d344719/hibernate-entitymanager-5.0.12.Final.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.transaction/javax.transaction-api/1.2/d81aff979d603edd90dcd8db2abc1f4ce6479e3e/javax.transaction-api-1.2.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/1.11.9.RELEASE/64c80f12361d5b74cf98a3433b59a5c961d78d38/spring-data-jpa-1.11.9.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aspects/4.3.13.RELEASE/c91788e6b7c431379d0f7fe5f85f427d7e3f01ae/spring-aspects-4.3.13.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjweaver/1.8.13/ad94df2a28d658a40dc27bbaff6a1ce5fbf04e9b/aspectjweaver-1.8.13.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-jdbc/8.5.23/6036400a8f2d90dd3ae3a4d09e5136c56002887b/tomcat-jdbc-8.5.23.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/4.3.13.RELEASE/68e95c2a065641559c7dab7b605bc5847ab026ad/spring-jdbc-4.3.13.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/1.0.0.Final/5e731d961297e5a07290bfaf3db1fbc8bbbf405a/hibernate-jpa-2.1-api-1.0.0.Final.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/antlr/antlr/2.7.7/83cd2cd674a217ade95a4bb83a8a14f351f48bd0/antlr-2.7.7.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss/jandex/2.0.0.Final/3e899258936f94649c777193e1be846387ed54b3/jandex-2.0.0.Final.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/dom4j/dom4j/1.6.1/5d3ccc056b6f056dbf0dddfdf43894b9065a8f94/dom4j-1.6.1.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate.common/hibernate-commons-annotations/5.0.1.Final/71e1cff3fcb20d3b3af4f3363c3ddb24d33c6879/hibernate-commons-annotations-5.0.1.Final.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/1.13.9.RELEASE/3910a598235d2e9c1ca56f34c5e62bb5ce23778/spring-data-commons-1.13.9.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-orm/4.3.13.RELEASE/382d3ce044204947f8f2b3fa67a665d4e2bd346f/spring-orm-4.3.13.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/4.3.13.RELEASE/6ebf7b3f2099fa884038d9d7bd44817ebd9c5b4a/spring-tx-4.3.13.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-juli/8.5.23/98e7f0610b7b2fb8303f11be0210e3f5a56a7d55/tomcat-juli-8.5.23.jar" />
         </element>
       </element>
     </root>

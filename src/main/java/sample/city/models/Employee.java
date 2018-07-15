@@ -1,9 +1,14 @@
 package sample.city.models;
 
+import javax.persistence.*;
+
 /**
  * Created by Rith on 7/15/2018.
  */
+@Entity
+@Table(name = "td_employee")
 public class Employee {
+
     private Long empId;
     private String empNo;
     private String empName;
@@ -27,6 +32,8 @@ public class Employee {
         this.position = position;
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getEmpId() {
         return empId;
     }
