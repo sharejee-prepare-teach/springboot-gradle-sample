@@ -10,7 +10,6 @@ public class Employee {
     private String position;
 
     public Employee() {
-
     }
 
     public Employee(EmployeeForm empForm) {
