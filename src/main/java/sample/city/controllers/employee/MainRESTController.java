@@ -4,9 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import sample.city.models.Employee;
-import sample.city.models.EmployeeForm;
-import sample.city.repositories.EmployeeDAO;
+import sample.city.models.employee.Employee;
+import sample.city.models.employee.EmployeeHapper;
+import sample.city.repositories.employee.EmployeeDAO;
 
 import java.util.List;
 
@@ -56,7 +56,7 @@ public class MainRESTController {
             produces = { MediaType.APPLICATION_JSON_VALUE, //
                     MediaType.APPLICATION_XML_VALUE })
     @ResponseBody
-    public Employee addEmployee(@RequestBody EmployeeForm empForm) {
+    public Employee addEmployee(@RequestBody EmployeeHapper empForm) {
 
         System.out.println("(Service Side) Creating employee with empNo: " + empForm.getEmpNo());
 
@@ -72,7 +72,7 @@ public class MainRESTController {
             produces = { MediaType.APPLICATION_JSON_VALUE, //
                     MediaType.APPLICATION_XML_VALUE })
     @ResponseBody
-    public Employee updateEmployee(@RequestBody EmployeeForm empForm) {
+    public Employee updateEmployee(@RequestBody EmployeeHapper empForm) {
 
         System.out.println("(Service Side) Editing employee with Id: " + empForm.getEmpId());
 

@@ -63,9 +63,10 @@ app.controller("EmployeeController", function($scope, $http) {
     // HTTP GET- get all employees collection
     // Call: http://localhost:8080/employees
     function _refreshEmployeeData() {
+        alert("Get data");
         $http({
             method: 'GET',
-            url: '/employees'
+            url: 'http://localhost:8080/employees.json'
         }).then(
             function(res) { // success
                 $scope.employees = res.data;

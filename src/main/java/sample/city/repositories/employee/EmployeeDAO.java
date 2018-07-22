@@ -1,8 +1,8 @@
-package sample.city.repositories;
+package sample.city.repositories.employee;
 
 import org.springframework.stereotype.Repository;
-import sample.city.models.Employee;
-import sample.city.models.EmployeeForm;
+import sample.city.models.employee.Employee;
+import sample.city.models.employee.EmployeeHapper;
 
 import java.util.*;
 
@@ -42,7 +42,7 @@ public class EmployeeDAO {
         return empMap.get(empId);
     }
 
-    public Employee addEmployee(EmployeeForm empForm) {
+    public Employee addEmployee(EmployeeHapper empForm) {
         Long empId= this.getMaxEmpId()+ 1;
         empForm.setEmpId(empId);
         Employee newEmp = new Employee(empForm);
@@ -51,7 +51,7 @@ public class EmployeeDAO {
         return newEmp;
     }
 
-    public Employee updateEmployee(EmployeeForm empForm) {
+    public Employee updateEmployee(EmployeeHapper empForm) {
         Employee emp = this.getEmployee(empForm.getEmpId());
         if(emp!= null)  {
             emp.setEmpNo(empForm.getEmpNo());
