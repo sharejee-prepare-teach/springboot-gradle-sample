@@ -51,12 +51,31 @@ public class EmployeeDAO {
         return newEmp;
     }
 
+    public Employee addEmployee2(Employee employee) {
+        Long empId= this.getMaxEmpId()+ 1;
+        employee.setEmpId(empId);
+        Employee newEmp = new Employee(employee);
+
+        empMap.put(newEmp.getEmpId(), newEmp);
+        return newEmp;
+    }
+
     public Employee updateEmployee(EmployeeForm empForm) {
         Employee emp = this.getEmployee(empForm.getEmpId());
         if(emp!= null)  {
             emp.setEmpNo(empForm.getEmpNo());
             emp.setEmpName(empForm.getEmpName());
             emp.setPosition(empForm.getPosition());
+        }
+        return emp;
+    }
+
+    public Employee updateEmployee2(Employee employee) {
+        Employee emp = this.getEmployee(employee.getEmpId());
+        if(emp!= null)  {
+            emp.setEmpNo(employee.getEmpNo());
+            emp.setEmpName(employee.getEmpName());
+            emp.setPosition(employee.getPosition());
         }
         return emp;
     }

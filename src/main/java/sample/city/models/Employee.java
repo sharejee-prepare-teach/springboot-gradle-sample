@@ -20,6 +20,13 @@ public class Employee {
         this.position = empForm.getPosition();
     }
 
+    public Employee(Employee employee) {
+        this.empId = employee.getEmpId();
+        this.empNo = employee.getEmpNo();
+        this.empName = employee.getEmpName();
+        this.position = employee.getPosition();
+    }
+
     public Employee(Long empId, String empNo, String empName, String position) {
         this.empId = empId;
         this.empNo = empNo;

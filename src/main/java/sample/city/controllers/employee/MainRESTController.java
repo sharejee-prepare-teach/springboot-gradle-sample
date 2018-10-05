@@ -56,11 +56,11 @@ public class MainRESTController {
             produces = { MediaType.APPLICATION_JSON_VALUE, //
                     MediaType.APPLICATION_XML_VALUE })
     @ResponseBody
-    public Employee addEmployee(@RequestBody EmployeeForm empForm) {
+    public Employee addEmployee(@RequestBody Employee employee) {
 
-        System.out.println("(Service Side) Creating employee with empNo: " + empForm.getEmpNo());
+        System.out.println("(Service Side) Creating employee with empNo: " + employee.getEmpNo());
 
-        return employeeDAO.addEmployee(empForm);
+        return employeeDAO.addEmployee2(employee);
     }
 
     // URL:
@@ -72,11 +72,11 @@ public class MainRESTController {
             produces = { MediaType.APPLICATION_JSON_VALUE, //
                     MediaType.APPLICATION_XML_VALUE })
     @ResponseBody
-    public Employee updateEmployee(@RequestBody EmployeeForm empForm) {
+    public Employee updateEmployee(@RequestBody Employee employee) {
 
-        System.out.println("(Service Side) Editing employee with Id: " + empForm.getEmpId());
+        System.out.println("(Service Side) Editing employee with Id: " + employee.getEmpId());
 
-        return employeeDAO.updateEmployee(empForm);
+        return employeeDAO.updateEmployee2(employee);
     }
 
     // URL:
