@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="utf-8"/>
+    <title>Person Test</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/css/app.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
+    <script type="text/javascript" src="/js/appPerson.js"></script>
+    <script type="text/javascript" src="/js/service/PersonListService.js"></script>
+</head>
+<body>
+<div class="generic-container">
+    <h2>SellPoint - AngularJS Routing Application</h2>
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading"><span class="lead">All Items</span></div>
+        <div class="tablecontainer">
+            <ul>
+                <li><a href="#/items/person_list">person_list</a></li>
+                <li><a href="#/items/home2">Home2</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div ng-view="ng-view"></div>
+<script type="text/javascript" src="/js/controller/PersonHomeController.js"></script>
+</body>
+</html>

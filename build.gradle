@@ -37,6 +37,8 @@ dependencies {
     compile("org.springframework.boot:spring-boot-devtools")
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
     compile("org.springframework.boot:spring-boot-starter-parent:1.4.2.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.data:spring-data-rest-core:2.6.7.RELEASE")
     testCompile("junit:junit")
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
