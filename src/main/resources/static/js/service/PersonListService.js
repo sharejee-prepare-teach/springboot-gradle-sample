@@ -32,3 +32,7 @@ appPerson.factory('PersonListService', ['$http', '$q', function($http, $q){
     };
 
 }]);
+
+appPerson.factory("user",function(){
+    return {};
+});

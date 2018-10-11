@@ -31,17 +31,16 @@ appPerson.config(['$routeProvider', function($routeProvider) {
             }]
         }
     })
-    .when('/items/create', {
-            templateUrl: 'items/create'/*,
-            controller : "PersonHomeController as itemPersonHomeCtl",
+    .when('/items/create/', {
+            templateUrl: 'items/create',
+            controller : "PersonHomeA1Controller as itemPersonHomeCtl"/*,
             resolve: {
-                async: ['PersonListService','$route', function(PersonListService,$route) {
-                    return PersonListService.fetchSpecificSavePerson('save/'+$route.current);
+                async: ['PersonListService','$route', function(PersonListService) {
+                    return PersonListService.fetchSpecificSavePerson('save');
                 }]
             }*/
         })
         .otherwise({redirectTo:'/item/home2'});
-alert("Hello");
     }]
 
 );
