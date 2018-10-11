@@ -15,7 +15,7 @@ appPerson.factory('PersonListService', ['$http', '$q', function($http, $q){
                         return $q.reject(errResponse);
                     }
                 );
-        },
+        }/*,
 
         fetchSpecificItem: function() {
             return $http.get('http://localhost:8080/item/home2')
@@ -28,7 +28,7 @@ appPerson.factory('PersonListService', ['$http', '$q', function($http, $q){
                         return $q.reject(errResponse);
                     }
                 );
-        }
+        }*/
     };
 
 }]);

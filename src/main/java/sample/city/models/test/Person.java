@@ -1,9 +1,15 @@
 package sample.city.models.test;
 
+import javax.persistence.*;
+
 /**
  * Created by Rith on 10/9/2018.
  */
+@Entity
+@Table(name = "person")
 public class Person {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 

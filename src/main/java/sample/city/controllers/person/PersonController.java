@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import sample.city.services.PersonService;
+import sample.city.services.PersonServiceCRUD;
 
 /**
  * Created by Rith on 10/9/2018.
@@ -14,12 +15,12 @@ import sample.city.services.PersonService;
 @RequestMapping(value = "/item")
 public class PersonController {
     @Autowired
-    private PersonService personService;
+    private PersonServiceCRUD personService;
 
     @RequestMapping(value="/person_list")
     public ResponseEntity<Object> findPersonHome() {
         System.out.println("findPersonHomelist");
-        Object item = 	personService.getPerson();
+        Object item = 	personService.getListPerson();
         if(item == null){
             return new ResponseEntity<Object>(HttpStatus.NO_CONTENT);//You many decide to return HttpStatus.NOT_FOUND
         }
@@ -28,7 +29,7 @@ public class PersonController {
     @RequestMapping(value="/home2")
     public ResponseEntity<Object> findPersonHome2() {
         System.out.println("findPersonHome2");
-        Object item = 	personService.getPerson();
+        Object item = 	personService.getListPerson();
         if(item == null){
             return new ResponseEntity<Object>(HttpStatus.NO_CONTENT);//You many decide to return HttpStatus.NOT_FOUND
         }

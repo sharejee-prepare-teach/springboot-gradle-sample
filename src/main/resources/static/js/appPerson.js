@@ -14,13 +14,13 @@ appPerson.config(['$routeProvider', function($routeProvider) {
         }
     })
     .when('/items/home2', {
-        templateUrl: 'items/home2',
+        templateUrl: 'items/home2'/*,
         controller : "PersonHomeController2 as itemDetailsCtrl",
         resolve: {
             async: ['PersonListService','$route', function(PersonListService) {
                 return PersonListService.fetchSpecificItem('/item/home2');
             }]
-        }
+        }*/
     })
     .when('/items/home', {
         templateUrl: 'items/home',
