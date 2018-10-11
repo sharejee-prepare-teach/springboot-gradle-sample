@@ -31,9 +31,17 @@ appPerson.config(['$routeProvider', function($routeProvider) {
             }]
         }
     })
-
+    .when('/items/create', {
+            templateUrl: 'items/create'/*,
+            controller : "PersonHomeController as itemPersonHomeCtl",
+            resolve: {
+                async: ['PersonListService','$route', function(PersonListService,$route) {
+                    return PersonListService.fetchSpecificSavePerson('save/'+$route.current);
+                }]
+            }*/
+        })
         .otherwise({redirectTo:'/item/home2'});
-
+alert("Hello");
     }]
 
 );

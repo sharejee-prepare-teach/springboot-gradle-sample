@@ -10,5 +10,5 @@ import java.util.List;
 public interface PersonServiceCRUD {
     List<Person> getListPerson();
 
-    void save(Person person);
+    Person save(Person person);
 }

@@ -15,20 +15,20 @@ appPerson.factory('PersonListService', ['$http', '$q', function($http, $q){
                         return $q.reject(errResponse);
                     }
                 );
-        }/*,
+        },
 
-        fetchSpecificItem: function() {
-            return $http.get('http://localhost:8080/item/home2')
+         fetchSpecificSavePerson: function(category) {
+            return $http.post('http://localhost:8080/item/'+category)
                 .then(
                     function(response){
                         return response.data;
                     },
                     function(errResponse){
-                        console.error('Error while fetching specific Item');
+                       /* console.error('Error while fetching specific Item');*/
                         return $q.reject(errResponse);
                     }
                 );
-        }*/
+        }
     };
 
 }]);

@@ -39,7 +39,7 @@ app.controller("EmployeeController", function($scope, $http) {
 
     $scope.createEmployee = function() {
         _clearFormData();
-    }
+    };
 
     // HTTP DELETE- delete employee by Id
     // Call: http://localhost:8080/employee/{empId}

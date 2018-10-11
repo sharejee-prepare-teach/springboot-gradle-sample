@@ -1,6 +1,7 @@
 package sample.city.controllers.person;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -17,5 +18,10 @@ public class MainPersonController {
     @RequestMapping(value="/home2")
     public String getPrinterPersonHome2() {
         return "/person/home2";
+    }
+
+    @RequestMapping(value = "/create")
+    public String toSavePerson(){
+        return "/person/create";
     }
 }
