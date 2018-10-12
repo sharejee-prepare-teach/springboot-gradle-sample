@@ -14,13 +14,8 @@ appPerson.config(['$routeProvider', function($routeProvider) {
         }
     })
     .when('/items/home2', {
-        templateUrl: 'items/home2'/*,
-        controller : "PersonHomeController2 as itemDetailsCtrl",
-        resolve: {
-            async: ['PersonListService','$route', function(PersonListService) {
-                return PersonListService.fetchSpecificItem('/item/home2');
-            }]
-        }*/
+        templateUrl: 'items/home2',
+        controller : "PersonHomeA1Controller as itemDetailsCtrl"
     })
     .when('/items/home', {
         templateUrl: 'items/home',
@@ -31,12 +26,12 @@ appPerson.config(['$routeProvider', function($routeProvider) {
             }]
         }
     })
-    .when('/items/create/', {
+    .when('/items/create', {
             templateUrl: 'items/create',
             controller : "PersonHomeA1Controller as itemPersonHomeCtl"/*,
             resolve: {
                 async: ['PersonListService','$route', function(PersonListService) {
-                    return PersonListService.fetchSpecificSavePerson('save');
+                    return PersonListService.fetchSpecificSavePerson('person');
                 }]
             }*/
         })

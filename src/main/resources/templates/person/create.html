@@ -12,8 +12,8 @@
           href="../../main.css" />
 
 </head>
-<body ng-app="PersonManagement" ng-controller="PersonController">
-<form class="form-horizontal" ng-submit="submitPerson()">
+<body ng-app="myApp" ng-controller="PersonHomeA1Controller">
+<form class="form-horizontal">
     <div class="col-md-6">
         <div class="box-body">
             Person ID: <label>{{person.id}}</label>
@@ -23,19 +23,14 @@
                 <div class="col-sm-10">
                     <input type="text" class="form-control form-control-thirty"
                            id="name" placeholder="Name"
-                           ng-model="person.name"
+                           ng-model="name"
                     />
                 </div>
             </div>
         </div>
     </div>
-    <div class="box-footer">
-        <button type="submit" class="btn btn-info">Save</button>
-    </div>
-    <a class="create-button" ng-click="createPerson()">Create Person</a>
+    <input type="button" value="Send" ng-click="postdata(name)" /> <br/><br/>
+    <!--<a class="create-button" ng-click="createPerson()">Create Person</a>-->
 </form>
-<script type="text/javascript">
-    alert("Hello create");
-</script>
 </body>
 </html>
