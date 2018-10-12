@@ -16,7 +16,13 @@
 <form class="form-horizontal">
     <div class="col-md-6">
         <div class="box-body">
-            Person ID: <label>{{person.id}}</label>
+            <!--Person ID: <label>{{person.id}}</label>-->
+            <div class="form-group" ng-show="userid">
+                <label class="control-label col-md-2">ID{{person.id}}</label>
+                <div class="col-md-4">
+                    <input type="number" class="form-control" ng-model="id" placeholder="1,2,3.." />
+                </div>
+            </div>
             <div class="form-group">
                 <label for="name" class="col-sm-2 control-label to-left">Name</label>
 
@@ -27,10 +33,16 @@
                     />
                 </div>
             </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label to-left">Action</label>
+                <div class="col-sm-10">
+                    <input type="button" value="update"/><br/><br/>
+                    <input type="button" value="Cancel"/><br/><br/>
+                </div>
+            </div>
         </div>
     </div>
     <input type="button" value="Send" ng-click="postdata(name)" /> <br/><br/>
-    <!--<a class="create-button" ng-click="createPerson()">Create Person</a>-->
 </form>
 </body>
 </html>

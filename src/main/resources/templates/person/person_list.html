@@ -7,12 +7,17 @@
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
+                    <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr ng-repeat="item in itemPersonHomeCtl.items">
                     <td>{{item.id}}</td>
                     <td>{{item.name}}</td>
+                    <td>
+                        <button class="btn btn-success btn-sm" ng-click="editUser(user)">Edit</button>
+                        <button class="btn btn-danger btn-sm" ng-click="deleteUser(user)">Delete</button>
+                    </td>
                 </tr>
                 </tbody>
             </table>
