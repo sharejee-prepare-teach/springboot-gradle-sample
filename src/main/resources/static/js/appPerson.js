@@ -28,12 +28,7 @@ appPerson.config(['$routeProvider', function($routeProvider) {
     })
     .when('/items/create', {
             templateUrl: 'items/create',
-            controller : "PersonHomeA1Controller as itemPersonHomeCtl"/*,
-            resolve: {
-                async: ['PersonListService','$route', function(PersonListService) {
-                    return PersonListService.fetchSpecificSavePerson('person');
-                }]
-            }*/
+            controller : "PersonHomeA1Controller as itemPersonHomeCtl"
         })
         .otherwise({redirectTo:'/item/home2'});
     }]
