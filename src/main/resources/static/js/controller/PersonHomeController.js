@@ -26,20 +26,21 @@ appPerson.controller( "PersonHomeA1Controller",function($scope,$http){
 appPerson.controller( "PersonHomeA2Controller",function($scope,$http){
     $scope.name = null;
     $scope.lblMsg = null;
-    $scope.putdata = function (id,name) {
+    $scope.putdata = function (id) {
         var data = {
-            id:id,
-            name: name
+            id: id,
+            name: $scope.name
         };
-        $http.put('/item/edit/'+putdata.id, JSON.stringify(data)).then(function (response) {
-            if (response.data){
-                $scope.msg = "Post Data Submitted Successfully!";
-            }
-        },function (response) {
-            $scope.msg = "Service not Exists";
-            $scope.statusval = response.status;
-            $scope.statustext = response.statusText;
-            $scope.headers = response.headers();
-        });
+        alert("Data name: "+data.name + "Data ID: "+data.id);
+        /*$http.put('/items/edit/' + data.id)
+            .success(function (data, status, headers) {
+                $scope.ServerResponse = data;
+            })
+            .error(function (data, status, header, config) {
+            $scope.ServerResponse =  htmlDecode("Data: " + data +
+                "\n\n\n\nstatus: " + status +
+                "\n\n\n\nheaders: " + header +
+                "\n\n\n\nconfig: " + config);
+        });*/
     };
 });
