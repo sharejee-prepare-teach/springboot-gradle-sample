@@ -9,7 +9,6 @@ appPerson.controller( "PersonHomeA1Controller",function($scope,$http){
     $scope.lblMsg = null;
     $scope.postdata = function (name) {
         var data = {
-            id: id,
             name: name
         };
     $http.post('/item/save', JSON.stringify(data)).then(function (response) {

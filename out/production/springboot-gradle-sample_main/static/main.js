@@ -2,10 +2,8 @@ var app = angular.module("EmployeeManagement", []);
 
 // Controller Part
 app.controller("EmployeeController", function($scope, $http) {
-
-
     $scope.employees = [];
-    $scope.employeeForm = {
+    $scope.employee = {
         empId: 1,
         empNo: "",
         empName: ""
@@ -21,7 +19,7 @@ app.controller("EmployeeController", function($scope, $http) {
         var method = "";
         var url = "";
 
-        if ($scope.employeeForm.empId == -1) {
+        if ($scope.employee.empId == -1) {
             method = "POST";
             url = '/employee';
         } else {
@@ -32,7 +30,7 @@ app.controller("EmployeeController", function($scope, $http) {
         $http({
             method: method,
             url: url,
-            data: angular.toJson($scope.employeeForm),
+            data: angular.toJson($scope.employee),
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -41,7 +39,7 @@ app.controller("EmployeeController", function($scope, $http) {
 
     $scope.createEmployee = function() {
         _clearFormData();
-    }
+    };
 
     // HTTP DELETE- delete employee by Id
     // Call: http://localhost:8080/employee/{empId}
@@ -54,9 +52,9 @@ app.controller("EmployeeController", function($scope, $http) {
 
     // In case of edit
     $scope.editEmployee = function(employee) {
-        $scope.employeeForm.empId = employee.empId;
-        $scope.employeeForm.empNo = employee.empNo;
-        $scope.employeeForm.empName = employee.empName;
+        $scope.employee.empId = employee.empId;
+        $scope.employee.empNo = employee.empNo;
+        $scope.employee.empName = employee.empName;
     };
 
     // Private Method
@@ -92,8 +90,8 @@ app.controller("EmployeeController", function($scope, $http) {
 
     // Clear the form
     function _clearFormData() {
-        $scope.employeeForm.empId = -1;
-        $scope.employeeForm.empNo = "";
-        $scope.employeeForm.empName = ""
+        $scope.employee.empId = -1;
+        $scope.employee.empNo = "";
+        $scope.employee.empName = ""
     };
 });
