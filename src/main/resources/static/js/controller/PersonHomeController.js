@@ -7,6 +7,7 @@ appPerson.controller('PersonHomeController', ['async', function(async) {
 appPerson.controller( "PersonHomeA1Controller",function($scope,$http){
     $scope.name = null;
     $scope.lblMsg = null;
+
     $scope.postdata = function (name) {
         var data = {
             name: name
@@ -22,5 +23,18 @@ appPerson.controller( "PersonHomeA1Controller",function($scope,$http){
         $scope.headers = response.headers();
     });
     };
+
+    $scope.updatePerson = function() {
+        $http({
+            method: 'PUT',
+            url: 'https://jsonplaceholder.typicode.com/users/' + $scope.user.id,
+            data: $scope.user
+
+        }).then(function successCallback(response) {
+            alert("User has updated Successfully")
+        }, function errorCallback(response) {
+            alert("Error. while updating user Try Again!");
+        });
+    }
 });
 
