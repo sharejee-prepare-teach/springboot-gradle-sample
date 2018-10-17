@@ -29,7 +29,11 @@ appPerson.config(['$routeProvider', function($routeProvider) {
     .when('/items/create', {
             templateUrl: 'items/create',
             controller : "PersonHomeA1Controller as itemPersonHomeCtl"
-        })
+    })
+    .when('/items/edit', {
+        templateUrl: 'items/edit'/*,
+        controller : "PersonHomeA1Controller as itemPersonHomeCtl"*/
+    })
         .otherwise({redirectTo:'/item/home2'});
     }]
 

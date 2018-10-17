@@ -24,4 +24,9 @@ public class MainPersonController {
     public String toSavePerson(){
         return "/person/create";
     }
+
+    @RequestMapping(value = "/edit")
+    public String toEditPerson(){
+        return "/person/edit";
+    }
 }
