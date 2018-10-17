@@ -11,4 +11,7 @@ public interface PersonServiceCRUD {
     List<Person> getListPerson();
 
     Person save(Person person);
+
+    Person findByID(Long id);
+
 }

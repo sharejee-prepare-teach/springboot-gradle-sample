@@ -31,8 +31,8 @@ appPerson.config(['$routeProvider', function($routeProvider) {
             controller : "PersonHomeA1Controller as itemPersonHomeCtl"
     })
     .when('/items/edit', {
-        templateUrl: 'items/edit'/*,
-        controller : "PersonHomeA1Controller as itemPersonHomeCtl"*/
+        templateUrl: 'items/edit',
+        controller : "PersonHomeA2Controller as itemPersonHomeCtl"
     })
         .otherwise({redirectTo:'/item/home2'});
     }]

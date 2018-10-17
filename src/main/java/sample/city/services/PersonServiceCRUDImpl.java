@@ -40,6 +40,11 @@ public class PersonServiceCRUDImpl implements PersonServiceCRUD {
         return personRepository.save(person);
     }
 
+    @Override
+    public Person findByID(Long id) {
+        return personRepository.findOne(id);
+    }
+
     public List<Person> getListPersonDefault(){
         List<Person> personList = new ArrayList<>();
         for (Long i = 0L; i < 5L; i++) {

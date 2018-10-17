@@ -26,11 +26,12 @@ appPerson.controller( "PersonHomeA1Controller",function($scope,$http){
 appPerson.controller( "PersonHomeA2Controller",function($scope,$http){
     $scope.name = null;
     $scope.lblMsg = null;
-    $scope.postdata = function (name) {
+    $scope.putdata = function (id,name) {
         var data = {
+            id:id,
             name: name
         };
-        $http.put('/item/edit', JSON.stringify(data)).then(function (response) {
+        $http.put('/item/edit/'+putdata.id, JSON.stringify(data)).then(function (response) {
             if (response.data){
                 $scope.msg = "Post Data Submitted Successfully!";
             }
