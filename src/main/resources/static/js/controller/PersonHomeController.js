@@ -26,7 +26,7 @@ appPerson.controller( "PersonHomeA1Controller",function($scope,$http){
 appPerson.controller( "PersonHomeA2Controller",function($scope,$http){
     $scope.name = null;
     $scope.lblMsg = null;
-    $scope.putdata = function (id) {
+    $scope.putdata = function (id,name) {
         var data = {
             id: id,
             name: $scope.name
