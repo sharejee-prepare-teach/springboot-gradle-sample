@@ -34,7 +34,16 @@ appPerson.config(['$routeProvider', function($routeProvider) {
         templateUrl: 'items/edit/',
         controller : "PersonHomeA2Controller as itemPersonHomeCtl"
     })
-        .otherwise({redirectTo:'/item/home2'});
+    .when('/items/detail/:id', {
+        templateUrl: 'items/detail',
+        controller : "PersonHomeController as itemPersonHomeDetailCtl",
+        resolve: {
+            async: ['PersonListService','$route', function(PersonListService , $route) {
+                return PersonListService.fetchSpecificItem('detail',$route.current.params.id);
+            }]
+        }
+    })
+    .otherwise({redirectTo:'/item/home2'});
     }]
 
 );

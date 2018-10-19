@@ -1,7 +1,7 @@
 var app = angular.module("PersonManagement", []);
 
 app.controller("PersonController",function ($scope,$http) {
-    alert("Submit Person");
+   alert("Submit Person");
    $scope.persons = [];
    $scope.person = {
        id: 1,

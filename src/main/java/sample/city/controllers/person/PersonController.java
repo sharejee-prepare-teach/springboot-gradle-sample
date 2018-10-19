@@ -58,4 +58,10 @@ public class PersonController {
         model.addAttribute("person", personService.findByID(id));
         return "edit";
     }
+
+    @RequestMapping(path = "/detail/{id}", method = RequestMethod.GET)
+    public String detailPerson(Model model, @PathVariable(value = "id") Long id) {
+        model.addAttribute("person", personService.findByID(id));
+        return "detail";
+    }
 }

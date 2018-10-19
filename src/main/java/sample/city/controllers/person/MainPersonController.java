@@ -29,4 +29,9 @@ public class MainPersonController {
     public String toEditPerson(){
         return "/person/edit";
     }
+    @RequestMapping(value = "/detail")
+    public String toDetailPerson(){
+        return "/person/detail";
+    }
+
 }
