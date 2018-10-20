@@ -25,7 +25,7 @@ public class MainPersonController {
         return "/person/create";
     }
 
-    @RequestMapping(value = "/edit")
+    @RequestMapping(value = "/personedit")
     public String toEditPerson(){
         return "/person/edit";
     }
