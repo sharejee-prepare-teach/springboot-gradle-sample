@@ -45,3 +45,19 @@ appPerson.controller( "PersonHomeA2Controller",function($scope,$http){
         });*/
     };
 });
+
+/*appPerson.controller( "PerHomeDetailController",function($scope,$http){
+    $scope.name = null;
+    $scope.lblMsg = null;
+    //$http GET
+    alert("ID Test: "+$scope.id + "; Name: "+$scope.name)
+  /!* $http.get('/item/detail/'+$scope.id, function successCallback(response) {
+
+     alert("User has updated Successfully")
+
+   }, function errorCallback(response) {
+
+      alert("Error. while updating user Try Again!");
+
+    });*!/
+});*/

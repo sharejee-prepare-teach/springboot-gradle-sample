@@ -1,19 +1,16 @@
 <div class="generic-container">
     <div class="panel panel-default">
         <!-- Default panel contents -->
-        <div class="panel-heading"><span class="lead">Computer Details</span></div>
+        <div class="panel-heading"><span class="lead">Person Detail</span></div>
         <div class="tablecontainer">
-            <table class="table table-hover">
+            <table class="table table-hover" ng-repeat="item in itemPerHomeDetailCtl">
                 <tr>
-                    <th>ID</th><td>{{itemPersonHomeDetailCtl.id}}</td>
+                    <th>ID</th><td>{{item.id}}</td>
                 </tr>
                 <tr>
-                    <th>Name</th><td>{{itemPersonHomeDetailCtl.name}}</td>
+                    <th>Name</th><td>{{item.name}}</td>
                 </tr>
             </table>
         </div>
     </div>
 </div>
-
-
-

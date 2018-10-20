@@ -17,13 +17,13 @@ appPerson.factory('PersonListService', ['$http', '$q', function($http, $q){
                 );
         },
         fetchSpecificItem: function(category,id) {
-            return $http.get('http://localhost:8081/person#/items/'+category+'/'+id)
+            return $http.get('http://localhost:8081/item/'+category+'/'+id)
                 .then(
                     function(response){
                         return response.data;
                     },
                     function(errResponse){
-                       /* console.error('Error while fetching specific Item');*/
+                       /!* console.error('Error while fetching specific Item');*!/
                         return $q.reject(errResponse);
                     }
                 );

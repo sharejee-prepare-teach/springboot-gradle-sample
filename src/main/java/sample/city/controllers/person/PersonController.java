@@ -59,9 +59,12 @@ public class PersonController {
         return "edit";
     }
 
-    @RequestMapping(path = "/detail/{id}", method = RequestMethod.GET)
-    public String detailPerson(Model model, @PathVariable(value = "id") Long id) {
-        model.addAttribute("person", personService.findByID(id));
-        return "detail";
+    @RequestMapping(value="/detail/{id}")
+    public ResponseEntity<Person> findSpecificPerson(@PathVariable("id") long id) {
+        Person item = 	personService.findByID(id);
+        if(item == null){
+            return new ResponseEntity<Person>(HttpStatus.NO_CONTENT);//You many decide to return HttpStatus.NOT_FOUND
+        }
+        return new ResponseEntity<Person>(item, HttpStatus.OK);
     }
 }

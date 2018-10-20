@@ -29,7 +29,7 @@ public class MainPersonController {
     public String toEditPerson(){
         return "/person/edit";
     }
-    @RequestMapping(value = "/detail")
+    @RequestMapping(value = "/persondetail")
     public String toDetailPerson(){
         return "/person/detail";
     }
