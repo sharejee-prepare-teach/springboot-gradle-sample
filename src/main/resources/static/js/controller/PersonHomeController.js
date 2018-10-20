@@ -24,7 +24,8 @@ appPerson.controller( "PersonHomeA1Controller",function($scope,$http){
     };
 });
 
-appPerson.controller( "PersonHomeA2Controller",function($scope,$http){
+/*appPerson.controller( "PersonHomeA2Controller",function($scope,$http){
+    alert("ID: "+$scope.id);
     $scope.name = null;
     $scope.lblMsg = null;
     $scope.putdata = function (id,name) {
@@ -33,7 +34,7 @@ appPerson.controller( "PersonHomeA2Controller",function($scope,$http){
             name: $scope.name
         };
         alert("Data name: "+data.name + "Data ID: "+data.id);
-        /*$http.put('/items/edit/' + data.id)
+        /!*$http.put('/items/edit/' + data.id)
             .success(function (data, status, headers) {
                 $scope.ServerResponse = data;
             })
@@ -42,9 +43,9 @@ appPerson.controller( "PersonHomeA2Controller",function($scope,$http){
                 "\n\n\n\nstatus: " + status +
                 "\n\n\n\nheaders: " + header +
                 "\n\n\n\nconfig: " + config);
-        });*/
+        });*!/
     };
-});
+});*/
 
 /*appPerson.controller( "PerHomeDetailController",function($scope,$http){
     $scope.name = null;

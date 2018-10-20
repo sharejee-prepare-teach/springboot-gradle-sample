@@ -32,7 +32,12 @@ appPerson.config(['$routeProvider', function($routeProvider) {
     })
     .when('/items/personedit/:id', {
         templateUrl: 'items/personedit/',
-        controller : "PersonHomeA2Controller as itemPersonHomeCtl"
+        controller : "PersonHomeDetailController as itemPerHomeDetailCtl",
+        resolve: {
+            async: ['PersonListService','$route', function(PersonListService , $route) {
+                return PersonListService.fetchSpecificUpdatePerson('edit',$route.current.params.id);
+            }]
+        }
     })
     .when('/items/persondetail/:id', {
         templateUrl: 'items/persondetail/',

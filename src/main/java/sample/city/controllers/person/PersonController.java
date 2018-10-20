@@ -53,10 +53,12 @@ public class PersonController {
         return new ResponseEntity<Object>(item, HttpStatus.OK);
     }
 
-    @RequestMapping(path = "/edit/{id}", method = RequestMethod.GET)
-    public String editPerson(Model model, @PathVariable(value = "id") Long id) {
-        model.addAttribute("person", personService.findByID(id));
-        return "edit";
+    @RequestMapping(path = "/edit/{id}")
+    public ResponseEntity<Object> editPerson(@PathVariable(value = "id") Long id) {
+        if(id == null){
+            return new ResponseEntity<Object>(HttpStatus.NO_CONTENT);//You many decide to return HttpStatus.NOT_FOUND
+        }
+        return new ResponseEntity<Object>(id,HttpStatus.OK);
     }
 
     @RequestMapping(value="/detail/{id}")
