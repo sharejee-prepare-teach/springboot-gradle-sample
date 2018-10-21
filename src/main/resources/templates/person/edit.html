@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8"/>
     <title>update person</title>
@@ -12,36 +12,32 @@
           href="../../main.css" />
 
 </head>
-<body ng-app="myApp" ng-controller="PersonHomeA2Controller">
-<form class="form-horizontal">
-    <div class="col-md-6">
-        <div class="box-body">
-            <!--Person ID: <label>{{person.id}}</label>-->
-            <div class="form-group" ng-show="userid">
-                <label class="control-label col-md-2">ID{{person.id}}</label>
-                <div class="col-md-4">
-                    <input type="number" class="form-control" ng-model="id" placeholder="1,2,3.." />
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="name" class="col-sm-2 control-label to-left">Name</label>
+<body ng-controller="PersonHomeA2Controller">
+        <form class="form-horizontal">
+            <div class="col-md-6">
+                <div class="box-body">
+                    <!--Person ID: <label>{{person.id}}</label>-->
+                    <div class="form-group">
+                        <label class="control-label col-md-2" ng-model="id">ID{{itemPerHomeDetailCtl.item.id}}</label>
+                        <div class="col-md-4">
+                            <input type="number" class="form-control"  placeholder="1,2,3.." />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label to-left">Name</label>
 
-                <div class="col-sm-10">
-                    <input type="text" class="form-control form-control-thirty"
-                           id="name" placeholder="Name"
-                           ng-model="name"
-                    />
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control form-control-thirty"
+                                   id="name" placeholder="Name"
+                                   ng-model="name"
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label to-left">Action</label>
-                <div class="col-sm-10">
-                    <input type="button" value="Cancel"/><br/><br/>
-                </div>
-            </div>
-        </div>
-    </div>
-    <input type="button" value="Send" ng-click="putdata(id,name)" /> <br/><br/>
-</form>
+            <input type="button" value="Send" ng-click="updatePerson(name)" /> <br/><br/>   <!--<br/><br/>
+            <input type="button" value="update" ng-click="updatePerson()" class="btn btn-success btn-sm"/>
+            --><a href="#/items/personupdate">Update</a>
+        </form>
 </body>
 </html>

@@ -24,41 +24,22 @@ appPerson.controller( "PersonHomeA1Controller",function($scope,$http){
     };
 });
 
-/*appPerson.controller( "PersonHomeA2Controller",function($scope,$http){
-    alert("ID: "+$scope.id);
-    $scope.name = null;
-    $scope.lblMsg = null;
-    $scope.putdata = function (id,name) {
+appPerson.controller( "PersonHomeA2Controller",function($scope,$http){
+    alert("Hello updatePerson scope.neme "+$scope);
+    $scope.updatePerson = function(name) {
+        alert("Hello updatePerson 2 ID: ");
         var data = {
-            id: id,
-            name: $scope.name
+            name: name
         };
-        alert("Data name: "+data.name + "Data ID: "+data.id);
-        /!*$http.put('/items/edit/' + data.id)
-            .success(function (data, status, headers) {
-                $scope.ServerResponse = data;
-            })
-            .error(function (data, status, header, config) {
-            $scope.ServerResponse =  htmlDecode("Data: " + data +
-                "\n\n\n\nstatus: " + status +
-                "\n\n\n\nheaders: " + header +
-                "\n\n\n\nconfig: " + config);
-        });*!/
+        $http.post('/item/personupdateSave', JSON.stringify(data)).then(function (response) {
+            if (response.data){
+                $scope.msg = "Post Data Submitted Successfully!";
+            }
+        },function (response) {
+            $scope.msg = "Service not Exists";
+            $scope.statusval = response.status;
+            $scope.statustext = response.statusText;
+            $scope.headers = response.headers();
+        });
     };
-});*/
-
-/*appPerson.controller( "PerHomeDetailController",function($scope,$http){
-    $scope.name = null;
-    $scope.lblMsg = null;
-    //$http GET
-    alert("ID Test: "+$scope.id + "; Name: "+$scope.name)
-  /!* $http.get('/item/detail/'+$scope.id, function successCallback(response) {
-
-     alert("User has updated Successfully")
-
-   }, function errorCallback(response) {
-
-      alert("Error. while updating user Try Again!");
-
-    });*!/
-});*/
+});

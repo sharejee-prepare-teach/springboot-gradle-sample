@@ -55,10 +55,11 @@ public class PersonController {
 
     @RequestMapping(path = "/edit/{id}")
     public ResponseEntity<Object> editPerson(@PathVariable(value = "id") Long id) {
-        if(id == null){
+        Person item = 	personService.findByID(id);
+        if(item == null){
             return new ResponseEntity<Object>(HttpStatus.NO_CONTENT);//You many decide to return HttpStatus.NOT_FOUND
         }
-        return new ResponseEntity<Object>(id,HttpStatus.OK);
+        return new ResponseEntity<Object>(item,HttpStatus.OK);
     }
 
     @RequestMapping(value="/detail/{id}")
@@ -68,5 +69,13 @@ public class PersonController {
             return new ResponseEntity<Person>(HttpStatus.NO_CONTENT);//You many decide to return HttpStatus.NOT_FOUND
         }
         return new ResponseEntity<Person>(item, HttpStatus.OK);
+    }
+    @RequestMapping(value = "/personupdateSave",method = RequestMethod.POST)
+    public ResponseEntity<Object> updatePerson(@RequestBody Person person) {
+        if(person == null){
+            personService.save(person);
+            return new ResponseEntity<Object>(HttpStatus.NO_CONTENT);//You many decide to return HttpStatus.NOT_FOUND
+        }
+        return new ResponseEntity<Object>(person,HttpStatus.OK);
     }
 }
