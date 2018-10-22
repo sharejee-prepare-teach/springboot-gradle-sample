@@ -45,6 +45,11 @@ public class PersonServiceCRUDImpl implements PersonServiceCRUD {
         return personRepository.findOne(id);
     }
 
+    @Override
+    public void delete(Long id) {
+        personRepository.delete(id);
+    }
+
     public List<Person> getListPersonDefault(){
         List<Person> personList = new ArrayList<>();
         for (Long i = 0L; i < 5L; i++) {

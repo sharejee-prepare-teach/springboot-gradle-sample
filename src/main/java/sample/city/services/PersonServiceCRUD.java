@@ -14,4 +14,6 @@ public interface PersonServiceCRUD {
 
     Person findByID(Long id);
 
+    void delete(Long id);
+
 }

@@ -34,10 +34,6 @@ appPerson.config(['$routeProvider', function($routeProvider) {
         templateUrl: 'items/personedit/',
         controller : "PersonHomeEditController as itemEditController"
     })
-    .when('/items/personupdate/:id', {
-            templateUrl: 'items/personupdate/',
-            controller : "PersonHomeA2Controller as itemPersonUpdateHomeCtl"
-    })
     .when('/items/persondetail/:id', {
         templateUrl: 'items/persondetail/',
         controller : "PersonHomeDetailController as itemPerHomeDetailCtl",
@@ -46,6 +42,10 @@ appPerson.config(['$routeProvider', function($routeProvider) {
                 return PersonListService.fetchSpecificItem('detail',$route.current.params.id);
             }]
         }
+    })
+    .when('/item/delete/:id',{
+        templateUrl: 'item/person_list',
+        controller : "PersonHomeDelete as itemDelete"
     })
     .otherwise({redirectTo:'/item/home2'});
     }]

@@ -80,4 +80,12 @@ public class PersonController {
         }
         return new ResponseEntity<Object>(person,HttpStatus.OK);
     }
+    @RequestMapping(value = "/delete/{id}",method = RequestMethod.DELETE)
+    public ResponseEntity<Object> deletePerson(@PathVariable("id") Long id) {
+        if (id != null) {
+            personService.delete(id);
+            return new ResponseEntity<Object>(HttpStatus.NO_CONTENT);//You many decide to return HttpStatus.NOT_FOUND
+        }
+        return new ResponseEntity<Object>(id,HttpStatus.OK);
+    }
 }

@@ -1,8 +1,14 @@
 package sample.city.controllers.person;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import sample.city.services.PersonServiceCRUD;
 
 /**
  * Created by Rith on 10/10/2018.
@@ -10,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/items")
 public class MainPersonController {
+
     @RequestMapping(value="/person_list")
     public String getPrinterPersonHome() {
         return "/person/person_list";
@@ -38,4 +45,8 @@ public class MainPersonController {
         return "/person/detail";
     }
 
+    /*@RequestMapping(value="/delete")
+    public String getDelete() {
+        return "/person/delete";
+    }*/
 }
