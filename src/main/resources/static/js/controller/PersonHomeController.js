@@ -27,7 +27,6 @@ appPerson.controller( "PersonHomeA1Controller",function($scope,$http){
 appPerson.controller( "PersonHomeA2Controller",function($scope,$http,$route){
     $scope.myID = ""+$route.current.params.id;
     $scope.updatePerson = function(name) {
-        alert("Hello updatePerson 2 ID: ");
         var data = {
             id:$route.current.params.id,
             name: name
