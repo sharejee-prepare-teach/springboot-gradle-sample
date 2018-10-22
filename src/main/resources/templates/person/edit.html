@@ -12,16 +12,14 @@
           href="../../main.css" />
 
 </head>
-<body ng-controller="PersonHomeA2Controller">
+<body ng-controller="PersonHomeEditController">
         <form class="form-horizontal">
             <div class="col-md-6">
                 <div class="box-body">
                     <!--Person ID: <label>{{person.id}}</label>-->
                     <div class="form-group">
-                        <label class="control-label col-md-2" ng-model="id" ng-value="myID">ID{{itemPerHomeDetailCtl.item.id}}</label>
-                        <div class="col-md-4">
-                            <input type="number" class="form-control"  placeholder="1,2,3.." />
-                        </div>
+                        <label class="control-label col-md-2" ng-model="id" ng-value="myID" hidden="hidden">ID{{itemPerHomeDetailCtl.item.id}}</label>
+
                     </div>
                     <div class="form-group">
                         <label for="name" class="col-sm-2 control-label to-left">Name</label>
@@ -35,9 +33,7 @@
                     </div>
                 </div>
             </div>
-            <input type="button" value="Send" ng-click="updatePerson(name)" /> <br/><br/>   <!--<br/><br/>
-            <input type="button" value="update" ng-click="updatePerson()" class="btn btn-success btn-sm"/>
-            --><a href="#/items/personupdate/{{itemPerHomeDetailCtl.item.id}}">Update</a>
+            <input type="button" value="Send" ng-click="postdata(name)" /> <br/><br/>
         </form>
 </body>
 </html>
