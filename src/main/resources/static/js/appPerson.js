@@ -39,7 +39,7 @@ appPerson.config(['$routeProvider', function($routeProvider) {
             }]
         }
     })
-    .when('/items/personupdate', {
+    .when('/items/personupdate/:id', {
             templateUrl: 'items/personupdate/',
             controller : "PersonHomeA2Controller as itemPersonUpdateHomeCtl"
     })

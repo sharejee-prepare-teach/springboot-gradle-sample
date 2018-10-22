@@ -70,9 +70,10 @@ public class PersonController {
         }
         return new ResponseEntity<Person>(item, HttpStatus.OK);
     }
-    @RequestMapping(value = "/personupdateSave",method = RequestMethod.POST)
-    public ResponseEntity<Object> updatePerson(@RequestBody Person person) {
-        if(person == null){
+    @RequestMapping(value = "/personupdateSave/{id}",method = RequestMethod.POST)
+    public ResponseEntity<Object> updatePerson(@RequestBody Person person,@PathVariable("id") Long id) {
+        if (person != null && id != null) {
+            person.setId(id);
             personService.save(person);
             return new ResponseEntity<Object>(HttpStatus.NO_CONTENT);//You many decide to return HttpStatus.NOT_FOUND
         }
