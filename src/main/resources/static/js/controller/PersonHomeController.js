@@ -3,9 +3,6 @@
 appPerson.controller('PersonHomeController', ['async', function(async) {
     var self = this;
     self.items=async;
-   /* $scope.delete = function (id) {
-        alert("Delete");
-    }*/
 }]);
 appPerson.controller( "PersonHomeA1Controller",function($scope,$http){
     $scope.name = null;
@@ -51,6 +48,8 @@ appPerson.controller( "PersonHomeDelete",function($scope,$http,$route){
        id:$route.current.params.id
    };
     $http.delete('/item/delete/'+data.id).then(function (response) {
+        alert("ID: "+data.id+ " is aleady delete.");
     }, function (response) {
+        return $q.reject(response);
     });
 });

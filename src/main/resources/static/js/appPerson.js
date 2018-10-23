@@ -44,7 +44,7 @@ appPerson.config(['$routeProvider', function($routeProvider) {
         }
     })
     .when('/item/delete/:id',{
-        templateUrl: 'item/person_list',
+        templateUrl: 'items/delete',
         controller : "PersonHomeDelete as itemDelete"
     })
     .otherwise({redirectTo:'/item/home2'});

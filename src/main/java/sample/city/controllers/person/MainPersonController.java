@@ -44,9 +44,8 @@ public class MainPersonController {
     public String toDetailPerson(){
         return "/person/detail";
     }
-
-    /*@RequestMapping(value="/delete")
-    public String getDelete() {
+    @RequestMapping(value = "/delete")
+    public String toDeleteNote(){
         return "/person/delete";
-    }*/
+    }
 }
